@@ -1,4 +1,3 @@
-
 @import url(./vendor/normalize.css);
 @import url(./vendor/fonts/fonts.css);
 @import url(./blocks/page/page.css);
@@ -42,3 +41,5 @@
 @import url(./blocks/avatar-button/avatar-button.css);
 @import url(./blocks/avatar-block/avatar-block.css);
 @import url(./blocks/submit-btn/submit-btn.css);
+@import url(./blocks/delete-button/visibility/delete-button_visible.css);
+@import url(./blocks/delete-button/visibility/delete-button_hidden.css);
