@@ -71,23 +71,23 @@ function handleCardDelete(card) {
 
   function handleUpdateUser(newUserInfo) {
     api.updateUserInfo(newUserInfo)
-    .then((res) => setCurrentUser(res))
+    .then((res) => setCurrentUser(res),
+    closeAllPopups())
     .catch(err => console.log(err))
-    closeAllPopups()
   }
 
   function handleUpdateAvatar(userData){
     api.updateUserAvatar(userData)
-    .then((res) => setCurrentUser(res))
+    .then((res) => setCurrentUser(res),
+    closeAllPopups())
     .catch(err => console.log(err))
-    closeAllPopups();
    }
 
    function handleAddPlaceSubmit(userData) {
     api.addNewCard(userData)
-    .then(newCard => addCards([newCard, ...cards]))
+    .then(newCard => addCards([newCard, ...cards]),
+    closeAllPopups())
     .catch(err => console.log(err))
-    closeAllPopups();
 }
 
   return (

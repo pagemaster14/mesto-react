@@ -10,22 +10,22 @@ function EditProfilePopup(props) {
     React.useEffect(() => {
         setName(currentUser.name);
         setDescription(currentUser.about);
-      }, [currentUser]);
+      }, [currentUser, props.isOpen]);
 
-      function handleSubmit(e) {
-        e.preventDefault();
+function handleSubmit(e) {
+    e.preventDefault();
       
-        props.onUpdateUser({
-          name: name,
-          about: description,
-        });
-      }
+    props.onUpdateUser({
+      name: name,
+      about: description,
+});
+}
 
-      function handleChange(evt) {
-        evt.target.name === "name"
-          ? setName(evt.target.value)
-          : setDescription(evt.target.value);
-     }
+function handleChange(evt) {
+    evt.target.name === "name"
+    ? setName(evt.target.value)
+    : setDescription(evt.target.value);
+}
 
 return (
     <PopupWithForm name="edit-profile" title="Редактировать профиль"

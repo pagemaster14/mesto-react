@@ -4,6 +4,11 @@ import React from "react";
 function AddPlacePopup(props){
     const nameRef = React.useRef();
     const linkRef = React.useRef();
+
+    React.useEffect(() => {
+      nameRef.current.value=''
+      linkRef.current.value=''
+    }, [props.isOpen]);
     
     function handleSubmit(evt) {
         evt.preventDefault();
